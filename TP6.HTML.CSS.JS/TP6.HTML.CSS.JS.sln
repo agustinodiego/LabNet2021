@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{B692F031-97D1-4C16-8368-20CE1313E4F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{62797C80-2185-4CB1-9441-26962FEBBFDF}"
+	ProjectSection(SolutionItems) = preProject
+		formStyles.css = formStyles.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JS", "JS", "{CC88C765-D74D-4691-85B0-8EC7528FF6AF}"
+	ProjectSection(SolutionItems) = preProject
+		form.js = form.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{DC1BF356-BEFE-411F-A793-B10F50054ED3}"
+	ProjectSection(SolutionItems) = preProject
+		Form.html = Form.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{62797C80-2185-4CB1-9441-26962FEBBFDF} = {B692F031-97D1-4C16-8368-20CE1313E4F4}
+		{CC88C765-D74D-4691-85B0-8EC7528FF6AF} = {B692F031-97D1-4C16-8368-20CE1313E4F4}
+		{DC1BF356-BEFE-411F-A793-B10F50054ED3} = {B692F031-97D1-4C16-8368-20CE1313E4F4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52071A5E-1213-4835-9C5E-6235791CDB21}
+	EndGlobalSection
+EndGlobal

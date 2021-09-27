@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Informacion Personal</title>
+    <link href="formStyles.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script type="text/javascript" src="form.js"></script>
+</head>
+<body>
+    <style>
+        #age {
+            width: 10%;
+        }
+    </style>
+
+    <div class="container">
+        <h1>CONTACTO</h1>
+        <h3>Completa tus datos.</h3>
+        <form onsubmit="return validateForm();" style="width: 35%;">
+
+            <fieldset>
+                <legend>Informacion Personal:</legend>
+                <div>
+                    <label for="fname">Nombre:</label>
+                    <br />
+                    <input type="text" id="fname" name="firstname" placeholder="">
+                </div>
+                <div>
+                    <label for="lname">Apellido:</label>
+                    <br />
+                    <input type="text" id="lname" name="lastname" placeholder="">
+                </div>
+                <div>
+                    <label for="age">Edad:</label>
+                    <br />
+                    <input type="text" id="age" name="age" placeholder="">
+                </div>
+
+                <div id="listCheckbox">
+                    <div class="checkbox">
+                        <input type="radio" name="radioCheck" id="maleCheck" checked value="maleCheck" />
+                        <label for="maleCheck">Masculino</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" name="radioCheck" id="femaleCheck" value="femaleCheck" />
+                        <label for="femaleCheck">Femenino</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="radio" name="radioCheck" id="otherCheck" value="otherCheck" />
+                        <label for="otherCheck">Otro</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informacion Adicional:</legend>
+                <div>
+                    <label for="enterprise">Empresa:</label>
+                    <br />
+                    <input type="text" id="enterprise" name="enterprise" placeholder="">
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+            <input type="button" id="btnClearData" onclick="clearData();" value="Limpiar Datos">
+        </form>
+    </div>
+
+</body>
+</html>

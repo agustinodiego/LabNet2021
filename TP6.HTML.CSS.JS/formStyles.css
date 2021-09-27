@@ -1,0 +1,53 @@
+﻿
+input[type=text]{
+  width: 50%; 
+  padding: 12px; 
+  margin-top: 6px;
+  height: 5px;
+}
+
+#listCheckbox {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.container {
+  padding-left: 30px;
+}
+
+.container #btnClearData{
+    margin: 2px;
+    float: right;
+}
+
+form {
+    background-color: #969695;
+}
+
+fieldset {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-color: white;
+}
+
+fieldset legend, fieldset label{
+    font-family: Cambria;
+    font-style: italic;
+    color: white;
+    font-size: 20px;
+}
+
+input[type=submit] {
+    background-color: #1F74ED;
+    color: white;
+    padding: 5px 20px;
+    border: outset;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+input[type=submit]:hover {
+    background-color: #1F5DB6;
+}
