@@ -1,0 +1,35 @@
+﻿@model TP.SOLUCION.UI.Web.Models.ErrorVM
+
+@{
+    ViewBag.Title = "Error";
+}
+
+@Scripts.Render("~/bundles/jquery")
+
+
+<script type="text/jscript">
+
+    var model = {
+        Controller: '@Model.Controller',
+        ActionToDo: '@Model.ActionToDo'
+    }
+
+    $(window).on("load", (
+        $.ajax({
+            type: 'GET',
+            url: '@(Url.Action("ModalErrorAction", Model.Controller))',
+            data: model,
+            success: function (data) {
+                $.ajax({
+                    type: 'GET',
+                    url: '@(Url.Action("Index", Model.Controller))',
+                    success: function (result) {
+                        $("body").html(result);
+                        $("#Modal").html(data);
+                        $("#ModalError").modal();
+                    }
+                })
+            }
+        })
+    ));
+</script>

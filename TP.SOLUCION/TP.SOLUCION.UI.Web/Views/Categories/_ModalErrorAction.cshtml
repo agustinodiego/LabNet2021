@@ -1,0 +1,25 @@
+﻿@model TP.SOLUCION.UI.Web.Models.ErrorVM
+@{
+    ViewBag.Title = "Error";
+}
+
+<!-- Modal -->
+<div class="modal fade" id="ModalError" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">@Model.ActionToDo @Model.Controller</h4>
+            </div>
+            <div class="modal-body">
+                <p>It is impossible to do the @Model.ActionToDo action!</p>
+            </div>
+            <div class="modal-footer">
+                @Html.ActionLink("OK", "Index", new { }, new { @class = "btn btn-default" })
+            </div>
+        </div>
+
+    </div>
+</div>

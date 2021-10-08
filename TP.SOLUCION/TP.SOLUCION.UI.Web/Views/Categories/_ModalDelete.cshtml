@@ -1,0 +1,27 @@
+﻿@model TP.SOLUCION.UI.Web.Models.CategoriesVM
+
+@{
+    ViewBag.Title = "Delete Categories";
+}
+
+<!-- Modal -->
+<div class="modal fade" id="ModalDelete" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Delete Category</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure to delete the category <b>@Model.CategoryName</b> ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                @Html.ActionLink("Delete", "Delete", new { id = @Model.CategoryId }, new { @class = "btn btn-danger" })
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,83 @@
+﻿@model TP.SOLUCION.UI.Web.Models.CategoriesVM
+@{
+    ViewBag.Title = "Insert/Update Categories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string action;
+}
+
+@if (Model != null)
+{
+    if (Model.CategoryId != 0)
+    {
+        action = "Update";
+    }
+    else
+    {
+        action = "Insert";
+    }
+
+    <div id="InsertUpdateCategories">
+        @Html.ValidationSummary(true)
+        <div class="row">
+            <div class="col-md-10">
+                <h1>@action Category</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                @if (Model.CategoryId != 0) //Update
+                {
+                    <div class="row">
+                        <div class="col-md-6">
+                            @Html.HiddenFor(model => model.CategoryId)
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">Category Name</span>
+                                <input type="text" id="CategoryName" class="form-control" value="@Model.CategoryName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div>
+                                @Html.ValidationMessageFor(model => model.CategoryName)
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Description</span>
+                        @Html.TextArea("Description", @Model.Description, new { @class = "form-control", @rows = "3" })
+                    </div>
+                }
+                else    //Insert
+                {
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">Category Name</span>
+                                <input type="text" id="CategoryName" class="form-control" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            @Html.ValidationMessageFor(model => model.CategoryName)
+                        </div>
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">Description</span>
+                        @Html.TextArea("Description", new { @class = "form-control", @rows = "3" })
+                    </div>
+                }
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group" style="text-align: right;">
+                    @Html.ActionLink("Cancel", "Index", new { }, new { @class = "btn btn-default" })
+                    <button type="button" class="btn btn-success" onclick="insertUpdateCategory()">@action Category</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
